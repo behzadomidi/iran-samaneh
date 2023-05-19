@@ -356,6 +356,7 @@ body {
   margin-top: 8px;
   width: 35%;
   text-align: end;
+  color: rgb(196, 115, 8);
 }
 
 .video-content {
@@ -368,8 +369,39 @@ body {
   border-radius: 10px;
   transform: scaleX(96.5%);
   margin-top: 25px;
-  background-color: red;
   color: black;
+}
+.video-list-content:first-child {
+  padding-top: 0 !important;
+}
+.video-list-content:last-child {
+  border-bottom: none !important;
+}
+.video-list-content {
+  display: flex;
+  border-bottom: 1px solid #313131;
+  padding-bottom: 10px;
+  padding-top: 9px;
+}
+
+.video-list-img {
+  margin-left: 25px;
+}
+.video-list-img img {
+  width: 179px;
+  height: 103px;
+  border-radius: 12px;
+  margin-right: -11px;
+}
+.video-list-main h2 {
+  font-size: 20px;
+  text-align: start;
+  margin-top: 10px;
+}
+.retiti {
+  text-align: start;
+  font-size: 18px;
+  margin-top: 5px;
 }
 
 .video-title {
@@ -386,7 +418,7 @@ body {
   margin-top: 1px;
   border-radius: 10px;
   transform: scaleX(96.5%);
-  background-color: greenyellow;
+  background-color: rgb(64, 65, 64);
   color: black;
 }
 
@@ -457,10 +489,10 @@ body {
 
 .navigation-content {
   position: absolute;
-  top: 266px;
+  /* top: 266px;
   left: -22px;
   height: 849px;
-  width: 100%;
+  width: 100%; */
   background: linear-gradient(
     0deg,
     rgba(215, 224, 255, 1) 0%,
@@ -473,26 +505,41 @@ body {
   margin: 0 10px 0 -20px;
   border-radius: 20px 20px 10px 10px;
 }
+@media (min-width: 992px) {
+  .col-md-18 {
+    width: 50%;
+    float: right;
+  }
+}
 .ayeha-item-contents .row {
   margin-right: 0;
   margin-left: 0;
 }
 
-.imgs {
+.ayeha-content .imgs img {
   width: 492px;
   height: 328px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 2px 3px 8px -3px rgb(0 0 0/75%);
 }
-.imgs img {
+.ayeha-content .imgs img {
   border-radius: 10px;
   overflow: hidden;
 }
+.ayeha-item-text {
+  text-align: start;
+  padding: 10px 9px 20px;
+}
 .ayeha-text {
-  padding: 20px 0;
+  text-align: start;
+  padding: 20px 15px;
 }
 .ayeha-text h2 {
+  font-family: iranSansBold !important;
+  font-size: 16px;
+}
+.ayeha-item-text h2 {
   font-family: iranSansBold !important;
   font-size: 16px;
 }
@@ -504,6 +551,16 @@ body {
 .ayeha-content .subtitle {
   font: 13px/26px iranSans;
   color: #000;
+}
+.ayeha-contents-item {
+  width: 47%;
+  padding-left: 0;
+  float: right;
+}
+.ayeha-contents-item .imgs img {
+  height: 152px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .news-states {
   position: absolute;
@@ -517,53 +574,147 @@ body {
   color: black;
   display: flex;
 }
-.news-states-main-list {
-  display: flex;
-  padding: 20px 0px 0px 15px;
+.map-con {
+  padding-top: 10px;
 }
-.news-states-image-right {
-  width: 35rem;
-  height: 32rem;
+.header-sec {
+  padding: 8px 20px 0;
 }
-.news-states-image-left {
-  width: 200px;
-  height: 200px;
+.header_sec .section-header-general {
+  float: right;
 }
-.news-states-main h5 {
-  font: 13px/26px iranSansLight;
-  color: #3c3b3b;
-  word-spacing: 1px;
-  text-align: start;
+.section-header-general {
+  height: 47px;
+  padding: 6px 0;
+  margin-top: 5px;
+  position: relative;
 }
-.news-states-main h4 {
-  font: 16px/28px iranSansMedium;
-  color: #000;
-  text-align: start;
+.bg_fr_sec {
+  display: block;
+  float: right;
+  width: 18px;
+  height: 32px;
+  background: url(./sample/svg/r_sar.svg);
 }
-.news-states-main p {
+.section-name-header {
+  width: auto;
+  height: 28px;
+  background-color: #00b6cb;
+  color: #fff;
+  float: right;
+  display: block;
+  margin-top: 2px;
+  position: relative;
+  z-index: 2;
+  font: 14px/30px iranSansMedium;
+}
+.section-name-header::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: -2px;
+  z-index: 1;
+  background-color: #0a2598;
+}
+.section-name-header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  z-index: 1;
+  background-color: #a2722d;
+}
+.section-header-general .bg_ls_sec {
+  display: block;
+  float: right;
+  width: 45px;
+  height: 32px;
+  background: url(./sample/svg/l_sar.svg);
+  margin-right: -1px;
+}
+.image-map {
+  height: 492px;
+  float: right;
+  width: 1055px;
+}
+.services-news {
+  padding-right: 25px;
+  width: auto;
+}
+.combo-ostan {
+  padding-top: 30px;
+}
+.header-ostan {
+  margin-bottom: 40px;
+}
+.ostan-c {
+  position: relative;
+  float: right;
+  width: 186px;
+}
+.header-ostan-select {
+  background-color: #e4e9ff;
+  font: 14px/28px iranSansMedium;
+  outline: none;
+  padding: 0 20px 0 36px;
+  border-radius: 15px;
+  color: #1130b3;
+  height: 28px;
+}
+.service-ostanha-in {
+  display: block;
+  float: right;
+  margin-right: 10px;
+  background-color: #00b6cb;
+  font: 14px/28px iranSansMedium;
+  color: #fff;
+  border-radius: 15px;
+  padding: 0px 20px;
+}
+.ostan-item-contents {
+  padding-left: 40px;
+  padding-bottom: 10px;
+}
+
+.ostan-item-content {
+  padding: 25px 0;
+  border-bottom: 1px solid #d6ecee;
+}
+.ostan-item-content .imgs {
+  width: 155px;
+  height: 103px;
+  float: right;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.ostan-item-content .ostan-item-text {
+  float: right;
+  width: calc(100% - 155px);
+  padding-right: 15px;
+}
+.ostan-item-content .ostan-item-text .htitr {
+  float: right;
+}
+.ostan-item-content .ostan-item-text .subtitle {
   font: 14px/26px iranSansLight;
   color: #000;
   text-align: justify;
   word-spacing: -1px;
-  text-align: start;
 }
-.news-state-image {
-  border: 1px solid #000;
-  height: 107px;
-  width: 374px;
-  background: yellow;
-  margin: 29px 0px 15px 22px;
-  border-radius: 15px;
+.htitr {
+  font: 16px/28px iranSansMedium;
+  color: #000;
 }
-.news-state-header {
-  position: absolute;
-  height: 70px;
-  width: 100%;
-  background: #003339;
-  top: 0;
-  right: 0;
+.rutitle {
+  font: 13px/26px iranSansLight;
+  color: #3c3b3b;
+  word-spacing: 1px;
+  align-items: start;
 }
-
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }
@@ -742,7 +893,7 @@ body {
     align-items: center;
     margin-top: 28px;
     height: 40px;
-    background-color: red;
+    padding: 0 28px;
   }
   .video-bar p:first-child {
     margin-top: 10px;
@@ -765,7 +916,7 @@ body {
     border-radius: 10px;
     transform: scaleX(89%);
     margin-top: 18px;
-    background-color: red;
+
     color: black;
   }
 
@@ -779,8 +930,22 @@ body {
     transform: scaleX(95.65%);
     margin-top: 17px;
     margin-right: -13px;
-    background-color: greenyellow;
+    background-color: rgb(68, 69, 67);
     color: black;
+  }
+  .video-box p {
+    position: absolute;
+    bottom: 10px;
+    right: 35px;
+    font-size: 20px;
+    color: #fff;
+  }
+  .video-box h6 {
+    position: absolute;
+    bottom: 55px;
+    right: 35px;
+    font-size: 13px;
+    color: #bfbdbd;
   }
 
   .news-navigation {
