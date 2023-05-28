@@ -34,3 +34,37 @@ $(".province-block").click(function (e) {
 $(".province-block").on("click", function () {
   $(".ostan-item-contents").load("ajax/test.html");
 });
+
+$(document).ready(function () {
+  $(".nav-menu").hide();
+  $(".banner-backdrops").hide();
+});
+
+$(".hamberger-menu").click(function () {
+  $(".nav-menu").show();
+  $(".banner-backdrops").show();
+});
+
+$(".hamberger-menu").click(function () {
+  $("body").css("overflow", "hidden");
+});
+
+$(".menu-toggle").click(function () {
+  $(".nav-menu").hide();
+  $(".banner-backdrops").hide();
+});
+
+$(".banner-backdrops").click(function () {
+  $(this).hide();
+  $(".nav-menu").hide();
+});
+
+// var swiper3 = new Swiper(".myScroll", {
+//   direction: "vertical",
+//   slidesPerView: "auto",
+//   freeMode: true,
+//   scrollbar: {
+//     el: ".swiper-scrollbar",
+//   },
+//   mousewheel: true,
+// });

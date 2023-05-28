@@ -2,10 +2,7 @@
   font-family: "IranSansMedium";
   src: url("./font/IRANSansMobile_Medium.ttf");
 }
-@font-face {
-  font-family: "IranSansLight";
-  src: url("./fonts/IRANSansMobile_Light.ttf");
-}
+
 body {
   box-sizing: border-box !important;
   margin: 0 !important;
@@ -17,6 +14,110 @@ body {
 }
 img {
   cursor: pointer;
+}
+.banner-backdrops {
+  width: 100vw;
+  height: 796px;
+  z-index: 999;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  right: 0;
+}
+
+.nav-menu {
+  width: 350px;
+  height: 100vh;
+  background-color: #c5e1e4;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+}
+.nav-menu button {
+  background: inherit;
+  border: none;
+}
+.nav-menu button i {
+  font-size: 20px;
+}
+.nav-menu span {
+  color: #000;
+}
+
+.menu-content-page-first {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  width: 100%;
+  height: 53px;
+  background: #011464;
+  border-radius: 27px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+.menu-content-page-first span {
+  padding: 0 50px;
+}
+.accordion-item {
+  align-items: center;
+  text-align: start;
+  width: 100%;
+  background: #7ac9d3;
+  border-radius: 27px !important;
+  padding: 0 30px;
+  margin-bottom: 6px;
+}
+.accordion-item:hover {
+  background: #eee;
+}
+.menu-content-page-first:hover {
+  background: #eee;
+}
+.menu-content-page-first span:hover {
+  color: #000;
+}
+
+.accordion-button {
+  background: inherit !important;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+.accordion-button:not(.collapsed) {
+  box-shadow: none !important;
+}
+.menu-content-page-first span {
+  color: #fff;
+  font-size: 14px;
+}
+.menu-contents {
+  padding: 0 5px;
+  margin-top: 20px;
+}
+.menu-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  width: 100%;
+  height: 40px;
+  background: #7ac9d3;
+  border-radius: 27px;
+  padding: 0 30px;
+  margin-bottom: 6px;
+}
+.menu-content span {
+  color: #000;
+  font-size: 14px;
+}
+.menu-header {
+  display: flex;
+  justify-content: space-between;
 }
 .swiper {
   width: 100%;
@@ -984,6 +1085,17 @@ path.caspian {
     font-size: 20px;
     color: #79c5cd;
   }
+  .nav-menu {
+    width: 260px;
+    height: 796px;
+    background-color: #c5e1e4;
+    left: 0px;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+  }
   .footer-list {
     display: none;
   }
@@ -1835,5 +1947,10 @@ path.caspian {
     width: 14px;
     height: 28px;
     cursor: pointer;
+  }
+}
+@media (max-width: 425px) {
+  .nav-menu {
+    left: -233px;
   }
 }
